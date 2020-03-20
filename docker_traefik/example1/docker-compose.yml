@@ -1,0 +1,31 @@
+version: "3"
+services:
+
+  traefik:
+    image: traefik:alpine
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${PWD}/traefik.toml:/etc/traefik/traefik.toml
+    ports:
+      - 80:80
+      - 8080:8080 
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ${PWD}/example.com-index.html:/usr/share/nginx/html/index.html
+
+  apache:
+    image: httpd:alpine
+    volumes:
+      - ${PWD}/example.net-index.html:/usr/local/apache2/htdocs/index.html
+
+  tomcat:
+    image: tomcat:alpine
+    volumes:
+      - ${PWD}/sample.war:/usr/share/tomcat/webapps/sample.war
+
+  mysqldb:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD="SuperSecretPassword"
