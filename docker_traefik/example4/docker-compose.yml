@@ -1,0 +1,31 @@
+version: "3"
+services:
+  traefik:
+    image: traefik:alpine
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${PWD}/traefik.toml:/etc/traefik/traefik.toml
+      - ${PWD}/acme.json:/acme.json
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080 
+  multitool:
+    image: praqma/network-multitool 
+    expose:
+      - "80"
+    labels:
+      - traefik.enable=true
+      - traefik.port=80
+      # praqma multitool on AWS:
+      - traefik.frontend.rule=Host:multitool.lab.praqma.com
+  nginx:
+    image: nginx:alpine
+    expose:
+      - "80"
+    labels:
+      - traefik.enable=true
+      - traefik.port=80
+      # wbitt nginx test web server on AWS:
+      - traefik.frontend.rule=Host:nginx.wbitt.com
+
