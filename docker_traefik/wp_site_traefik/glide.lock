@@ -1,0 +1,12 @@
+hash: 196d8b1b860740bb87ea62b067d2ea3ad72d8cec86d8b87118db80af025a0ea5
+updated: 2017-09-15T23:05:26.100924524+05:30
+imports:
+- name: github.com/inconshreveable/mousetrap
+  version: 76626ae9c91c4f2a10f34cad8ce83ea42c93bb75
+- name: github.com/spf13/cobra
+  version: b78744579491c1ceeaaa3b40205e56b0591b93a3
+- name: github.com/spf13/pflag
+  version: 7aff26db30c1be810f9de5038ec5ef96ac41fd7c
+- name: gopkg.in/distillerytech/prompt.v1
+  version: 11ba73741e9d3a6999330d54537d0c35b092d71d
+testImports: []
