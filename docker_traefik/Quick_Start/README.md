@@ -1,5 +1,5 @@
-
-# create docker-compose with following content: 
+# How to use Traefik
+## create docker-compose with following content: 
 ```
 version: '3'
 
@@ -14,7 +14,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # So that Traefik can listen to the Docker events
 
 ```
-# Docker-compose up 
+## Docker-compose up 
 
 ```
 docker-compose up
@@ -28,6 +28,6 @@ c6c61df92853: Pull complete
 Creating quick_start_reverse-proxy_1 ... done
 Attaching to quick_start_reverse-proxy_1
 ````
-# Open Port 8080 for Traefik dashboard
+## Open Port 8080 for Traefik dashboard
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/click_8080.png)
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/dashboard.png)
