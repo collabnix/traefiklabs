@@ -1,7 +1,7 @@
 # An Ultimate Traefik Hands-on Labs
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/Traefiklabs%20.png)
 # Pre-requisites
-- Docker 
+- [Docker](https://labs.play-with-docker.com/)
 - Rancher 
 - AWS 
 - kubernetes 
