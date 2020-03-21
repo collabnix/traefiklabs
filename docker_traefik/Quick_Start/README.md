@@ -32,6 +32,9 @@ Attaching to quick_start_reverse-proxy_1
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/click_8080.png)
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/dashboard.png)
 
+
+## Create `traefik.toml.quickstart` with following content: 
+
 ```
 # quick-start stuff:
 
