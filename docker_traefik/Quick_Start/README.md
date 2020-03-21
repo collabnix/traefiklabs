@@ -1,1 +1,16 @@
 
+
+
+```
+docker-compose up
+Creating network "quick_start_default" with the default driver
+Pulling reverse-proxy (traefik:alpine)...
+alpine: Pulling from library/traefik
+9d48c3bd43c5: Pull complete
+1be319f51f9f: Pull complete
+aacb2071e114: Pull complete
+c6c61df92853: Pull complete
+Creating quick_start_reverse-proxy_1 ... done
+Attaching to quick_start_reverse-proxy_1
+````
+# Open Port 8080 for Traefik dashboard
