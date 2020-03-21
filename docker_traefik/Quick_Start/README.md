@@ -31,3 +31,24 @@ Attaching to quick_start_reverse-proxy_1
 ## Open Port 8080 for Traefik dashboard
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/click_8080.png)
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/dashboard.png)
+
+```
+# quick-start stuff:
+
+defaultEntryPoints = ["http"]
+
+[docker]
+  endpoint = "unix:///var/run/docker.sock"
+
+[api]
+  dashboard = true
+  entrypoint = "dashboard"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+  [entryPoints.dashboard]
+  address = ":8080"
+```
+
