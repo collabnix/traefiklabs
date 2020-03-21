@@ -15,3 +15,4 @@ Attaching to quick_start_reverse-proxy_1
 ````
 # Open Port 8080 for Traefik dashboard
 ![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/click_8080.png)
+![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/dashboard.png)
