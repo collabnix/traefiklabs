@@ -1,0 +1,5 @@
+package: github.com/nithin-bose/pekka
+import:
+- package: github.com/spf13/cobra
+- package: gopkg.in/distillerytech/prompt.v1
+  version: ^1.0.0
