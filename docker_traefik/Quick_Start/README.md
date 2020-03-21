@@ -1,5 +1,5 @@
 # How to use Traefik
-## create docker-compose with following content: 
+## Create `docker-compose.yml` with following content: 
 ```
 version: '3'
 
