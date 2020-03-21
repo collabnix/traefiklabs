@@ -54,4 +54,11 @@ defaultEntryPoints = ["http"]
   [entryPoints.dashboard]
   address = ":8080"
 ```
-
+## stop runing conntainer and remove it 
+```
+$ docker-compose rm -f
+Going to remove quick_start_reverse-proxy_1
+Removing quick_start_reverse-proxy_1 ... done
+[node1] (local) root@192.168.0.18 ~/traefiklabs/docker_traefik/Quick_Start
+$ 
+```
