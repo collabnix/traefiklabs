@@ -33,7 +33,7 @@ logLevel = "INFO"
 
 [acme]
 acmeLogging = true
-email = "kamranazeem@gmail.com"
+email = "smbiradar14@gmail.com"
 storage = "/acme.json"
 
 
