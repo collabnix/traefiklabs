@@ -1,0 +1,79 @@
+
+checkNewVersion = false
+
+logLevel = "DEBUG"
+defaultEntryPoints = ["http", "https"]
+
+# Ensure we get an accesslog
+[accessLog]
+
+################################################################
+# Generic API / Entrypoint configuration
+################################################################
+[api]
+  entryPoint = "traefik"
+  dashboard = true
+  debug = true
+  [api.statistics]
+  recentErrors = 100
+
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+  [entryPoints.http.redirect]
+    entryPoint = "https"
+    compress = true
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+
+
+################################################################
+# Rancher configuration backend
+################################################################
+
+# Enable Rancher configuration backend.
+[rancher]
+
+# Default domain used.
+# Can be overridden by setting the "traefik.domain" label on an service.
+#
+# Required
+#
+domain = "localhost"
+
+
+# Expose Rancher services by default in Traefik.
+exposedByDefault = false
+
+# Filter services with unhealthy states and inactive states.
+enableServiceHealthFilter = true
+
+# Enable Rancher metadata service configuration backend instead of the API
+# configuration backend.
+[rancher.metadata]
+
+# Poll the Rancher metadata service for changes every `rancher.RefreshSeconds`.
+# NOTE: this is less accurate than the default long polling technique which
+# will provide near instantaneous updates to Traefik
+intervalPoll = true
+
+
+# Enable Rancher API configuration backend.
+[rancher.api]
+
+# Endpoint to use when connecting to the Rancher API.
+#
+# Required
+endpoint = "http://rancher/v1"
+
+# AccessKey to use when connecting to the Rancher API.
+#
+# Required
+accessKey = ""
+
+# SecretKey to use when connecting to the Rancher API.
+#
+# Required
+secretKey = ""
