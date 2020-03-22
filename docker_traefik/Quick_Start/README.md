@@ -1,4 +1,6 @@
 # How to use Traefik
+
+![](https://raw.githubusercontent.com/collabnix/traefiklabs/master/docker_traefik/Quick_Start/quick_start.png)
 ## Create `docker-compose.yml` with following content: 
 ```
 version: '3'
